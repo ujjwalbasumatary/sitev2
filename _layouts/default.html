@@ -11,7 +11,7 @@
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
- <body>
+<body>
     <nav>
         <ul>
             {% for item in site.data.menu %}
@@ -19,34 +19,47 @@
             {% endfor %}
         </ul>
     </nav>
-	 
+    
     {{ content }}
 
     <style>
         nav {
-  display: flex;
-  justify-content: center;
-  background-color: #efefef;
-		width: 100%;
-overflow: auto;
-		overflow-x: auto;
-}
+            display: flex;
+            justify-content: center;
+            background-color: #efefef;
+            width: 100%;
+            overflow: auto; /* Allow horizontal scrolling if necessary */
+        }
 
-nav ul {
-  list-style: none;
-	display:flex;
-  padding: 0;
-  margin: 0;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal layout by default */
+        }
 
-nav li { 
-  padding: 10px;
-}
+        nav li {
+            padding: 10px;
+        }
 
-nav a {
-  color: #000;
-  text-decoration: none;
-}
+        nav a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* Media query for vertical navbar on smaller screens */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Change to vertical layout */
+                align-items: flex-start; /* Align items to the start */
+                width: 100%; /* Full width for vertical navbar */
+            }
+
+            nav li {
+                width: 100%; /* Make each item take full width */
+                text-align: left; /* Align text to the left */
+            }
+        }
 
       a.active {
         background-color: gray;
@@ -58,11 +71,6 @@ nav a {
 	      padding-top:20px;
 	      padding-bottom:20px;
       }
-      /* Media query for small screens */
-	@media (max-width: 768px) {
-	body {
-		flex-direction: column; /* Stack elements vertically */
-	}
 	
 	.sidenav {
 		position: relative; /* Change position to relative */
