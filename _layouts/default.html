@@ -21,21 +21,6 @@
     </nav>
     
     {{ content }}
-<nav>
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <ul id="nav-list">
-        {% for item in site.data.menu %}
-        <li><a class="{% if page.url == item.link %}active{% endif %}" href="{{ item.link }}">{{ item.title }}</a></li>
-        {% endfor %}
-    </ul>
-</nav>
-
-{{ content }}
-
 <style>
     nav {
         display: flex;
@@ -44,7 +29,7 @@
         background-color: #efefef;
         width: 100%;
         padding: 10px;
-        overflow: hidden;
+        overflow-x: auto;
     }
 
     nav ul {
@@ -79,24 +64,6 @@
     }
 
     /* Media query for smaller screens */
-    @media (max-width: 768px) {
-        nav ul {
-            display: none; /* Hide menu by default */
-            flex-direction: column; /* Stack vertically */
-            width: 100%;
-            max-height: 0; /* Collapsed state */
-            overflow: hidden; /* Prevent overflow */
-        }
-
-        nav ul.active {
-            display: flex; /* Show menu when active */
-            max-height: 300px; /* Adjust based on number of items */
-        }
-
-        .menu-toggle {
-            display: flex; /* Show hamburger icon */
-        }
-    }
 	.custom-padding {
 	      padding-left:120px;
 	      padding-right:400px;
@@ -117,14 +84,5 @@
 		padding-left: 50px;
 	}
 </style>
-
-<script>
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
-</script>
-  </body>
+</body>
 </html>
