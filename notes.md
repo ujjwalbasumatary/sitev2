@@ -2,7 +2,7 @@
 layout: default
 permalink: /notes/
 ---
-<div class="custom-padding">
+<div>
 This section has my notes for various topics that I learnt through books and lectures. They are very terse and mostly intended for my own reference but nonetheless I hope that they are also helpful to you.
 
 <h3>String theory notes</h3>
