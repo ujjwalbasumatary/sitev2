@@ -2,6 +2,7 @@
 layout: default
 permalink: /notes/
 ---
+<title>Notes</title>
 <div class="custom-padding">
 This section has my notes for various topics that I learnt through books and lectures. They are very terse and mostly intended for my own reference but nonetheless I hope that they are also helpful to you.
 <ul><li><a href="#">String theory notes</a> I am tring to work through Polchinski's two volume classic. These mostly contain details of calculations and my solutions to exercises.</li>
