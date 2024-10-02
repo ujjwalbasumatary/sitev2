@@ -2,6 +2,6 @@
 layout: default
 permalink: /publications/
 ---
-<div>
+<div class="custom-padding">
 Lol.
 </div>
