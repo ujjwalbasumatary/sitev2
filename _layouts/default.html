@@ -11,7 +11,7 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 	<nav class="navbar-custom navbar navbar-expand-md navbar-light bg-light" style="font-size:25px">
 		<button type="button" data-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
 			aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
@@ -55,12 +55,19 @@
 			color: #802a98;
 		} */
 	</style>
-	<footer style="bottom:0;left:0; width: 100%;text-align: center; position: fixed;">
+	<footer class="mt-auto" style="text-align: center;">
 		<div id="result"></div>
-		<script>
-			var date = document.lastModified;
-			document.getElementById("result").innerHTML = "Last updated: " + date;
-		</script>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-3 mb-5">
+					<script>
+						var date = document.lastModified;
+						document.getElementById("result").innerHTML = "Last updated: " + date;
+					</script>
+
+				</div>
+			</div>
+		</div>
 
 	</footer>
 </body>
