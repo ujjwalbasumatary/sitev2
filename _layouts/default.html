@@ -3,64 +3,96 @@
 <!doctype html>
 
 <html>
-	<head>
-		<meta name = "viewport" content = "width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href=
-		"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-	</head>
-	<body>
-		<nav>
-			<ul>
-			{% for item in site.data.menu %}
-				<li><a class="{%if page.url == item.link %}active{% endif %}" href = "{{ item.link }}">{{ item.title }}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
-		{{ content }}
-<style>
 
-body
-{
-	margin:0;
-	padding:0;
-	background-color: white;
-}
-nav
-{
-	width: 100%;
-	background-color: #9966cc;
-}
-nav ul
-{
-	width: 100%;
-	margin: 0 auto;
-	padding: 0;
-}
-nav ul li
-{
-	list-style:none;
-	display: inline-block;
-	padding: 20px;
-	font-size: 1.5vmax;
-}
-nav ul li:hover{
-	background: #9933cc;
-}
-nav ul li a{
-	color: #000;
-	text-decoration: none;
-}
-.active{
-	list-style:none;
-	text-decoration:underline;
-}
-.custom-padding {
-padding-left: 10vw;
-padding-right: 10vw;
-padding-top: 5vh;
-padding-bottom: 10vh;
-}
-</style>
-		</body>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+	<nav>
+		<ul>
+			{% for item in site.data.menu %}
+			<li><a class="{%if page.url == item.link %}active{% endif %}" href="{{ item.link }}">{{ item.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</nav>
+	{{ content }}
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: white;
+		}
+
+		nav {
+			width: 100%;
+			background-color: #9966cc;
+		}
+
+		nav ul {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		nav ul li {
+			list-style: none;
+			display: inline-block;
+			padding: 20px;
+			font-size: 1.5vmax;
+		}
+
+		nav ul li:hover {
+			background: #9933cc;
+		}
+
+		nav ul li a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.active {
+			list-style: none;
+			text-decoration: underline;
+		}
+
+		.custom-padding {
+			padding-left: 10vw;
+			padding-right: 10vw;
+			padding-top: 5vh;
+			padding-bottom: 10vh;
+		}
+
+		.sidebar {
+			margin: 0;
+			padding: 0;
+			width: 20vw;
+			position: fixed;
+			float: right;
+			/* right: 0; */
+			/* top: 7vh; */
+			height: 100%;
+			overflow: auto;
+		}
+
+		body {
+			font-family: serif;
+			/* Replace 'Your Font Name' with your desired font */
+		}
+		.col-md-8 {
+			padding-left: 10vw;
+			padding-right: 5vw;
+			padding-top: 5vh;
+			padding-bottom: 10vh;
+		}
+		.col-md-4 {
+			/* padding-top: 5vh;
+			padding-left: 10vh; */
+			padding-right: 5vh;
+		}
+	</style>
+</body>
 
 </html>
